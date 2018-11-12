@@ -4,7 +4,8 @@
 import distancia
 import texto
 
-BASEBR = ['textos/texto-ptbr1',
+BASEBR = ['textos/texto-ptbr0',
+          'textos/texto-ptbr1',
           'textos/texto-ptbr2',
           'textos/texto-ptbr3',
           'textos/texto-ptbr4',
@@ -22,11 +23,10 @@ BASEEN = ['textos/texto-en0',
           'textos/texto-en5',
           'textos/texto-en6',
           'textos/texto-en7',
-          'textos/texto-en8',
-          'textos/texto-en9'
+          'textos/texto-en8'
           ]
 
-ALVO = 'textos/texto-ptbr0'
+ALVO = 'textos/texto-en9'
 
 if __name__ == '__main__':
     base_conhecimento = []
