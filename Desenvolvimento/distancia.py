@@ -25,9 +25,9 @@ def distancia(texto1, texto2):
 
     # Coleta as características de cada texto
     for i, j in texto1.get_caracteristica():
-        d1.append(j)
+        d1.append(j/texto1.get_ncaracteres())
     for i, j in texto2.get_caracteristica():
-        d2.append(j)
+        d2.append(j/texto2.get_ncaracteres())
 
     # Faz a diferença entre os valores
     d = [a - b for a, b in zip(d1, d2)]
