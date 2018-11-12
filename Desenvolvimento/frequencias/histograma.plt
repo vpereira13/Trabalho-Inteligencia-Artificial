@@ -19,7 +19,7 @@ set style fill solid
 set xtic rotate by 0
 
 # Adiciona margem na parte inferior para caber nomes no eixo x
-set bmargin 8
+#set bmargin 8
 
 # Posiciona os textos na margem inferior
 set xtics offset 0.5, 0
