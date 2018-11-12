@@ -29,6 +29,7 @@ class Texto:
         self.__nome = nome
         self.__idioma = idioma
         self.__caracteristica = contador.contador(nome)
+        self.__ncaracteres = contador.ncaracters(nome)
 
     # Getters
     def get_idioma(self):
@@ -36,3 +37,6 @@ class Texto:
 
     def get_caracteristica(self):
         return self.__caracteristica
+
+    def get_ncaracteres(self):
+        return self.__ncaracteres
