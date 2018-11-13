@@ -2,12 +2,12 @@
 O grupo, analisando o problema, chegou a conclusão que uma solução efetiva seria usar o modelo preditivo tendo como entrada os textos da base previamente classificados e fazer uma comparação com o nosso alvo.
 
 \subsection{Modelo baseado em distância}
-A técnica que decidimos utilizar é baseado na \textbf{distância euclidiana}~\ref{eqn:euclid} entre o texto sem classificação e os textos da base de conhecimento. Como a distância envolvendo a quantidade de ocorrência poderia dar uma falsa informação, usamos a porcentagem que cada letra é encontrada no texto.
+A técnica que decidimos utilizar é baseado na \textbf{distância euclidiana}~(\ref{eqn:euclid}) entre o texto sem classificação e os textos da base de conhecimento. Como a distância envolvendo a quantidade de ocorrência poderia dar uma falsa informação, usamos a porcentagem que cada letra é encontrada no texto.
 
-\[
+\begin{equation}
 d(x_i, x_j) = \sqrt{\sum_{l=1}^{d} (x^l_i - x^l_j)^2}
 \label{eqn:euclid}
-\]
+\end{equation}
 
 \subsection{Método \emph{k-NN}}
 Para identificar em qual idioma um texto está escrito, utilizamos o algoritmo \emph{k-NN} (\emph{k-Nearest Neighbor}, em inglês). Este é um algoritmo de identificação de padrões, que consiste em verificar e comparar as frequências dos caracteres nos textos base com o novo texto, para identificar uma proximidade e decidir o idioma.
