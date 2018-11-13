@@ -9,5 +9,10 @@ d(x_i, x_j) = \sqrt{\sum_{l=1}^{d} (x^l_i - x^l_j)^2}
 \label{eqn:euclid}
 \]
 
+\subsection{Método \emph{k-NN}}
+Para identificar em qual idioma um texto está escrito, utilizamos o algoritmo \emph{k-NN} (\emph{k-Nearest Neighbor}, em inglês). Este é um algoritmo de identificação de padrões, que consiste em verificar e comparar as frequências dos caracteres nos textos base com o novo texto, para identificar uma proximidade e decidir o idioma.
+
+É possível melhorar o desempenho do algoritmo removendo fatores que não são de grande importância. Assim como escolher um bom valor para “\emph{k}” em cada caso reduz a chance de erro na escolha.
+
 Como a distância para o mais próximo pode não ser tão precisa, a utilização do algoritmo \emph{k-NN}, do inglês \emph{k-Nearest Neighbor} se fez necessária, assim calculamos a distância para cada texto e fazemos uma média dos \emph{n} primeros, utilizando \(n = 3\).
 
