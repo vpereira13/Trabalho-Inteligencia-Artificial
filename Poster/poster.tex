@@ -39,12 +39,12 @@
 \usepackage{polyglossia}
     \setdefaultlanguage{portuges}
 \usepackage{microtype}
-\usepackage{showframe}
 \usepackage{verbatim}
 \usepackage{ragged2e}
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{url}
+%\usepackage{showframe}
 
 \begin{document}
 
@@ -89,7 +89,7 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Introdução}
-A análise de textos em línguas diferentes pode ser feita de diversas maneiras, uma delas é em relação as palavras, a qual temos que verificar em qual dicionário está. Porém, uma outra forma de analisar é pela frequência de cada caracter, e essa é a abordagem que usaremos.
+A análise de textos em línguas diferentes pode ser feita de diversas maneiras, uma delas é em relação as palavras, a qual temos que verificar em qual dicionário está. Porém, uma outra forma de analisar é pela frequência de cada caractere, e essa é a abordagem que usaremos.
 
 \begin{multicols}{2}
     \begin{framed}
@@ -123,12 +123,13 @@ A quantidade de cada caractere é uma informação relevante, mas não podendo s
 Pela análise do nosso problema, consideramos utilizar \textbf{modelos preditivos} para poder classificar o texto com base em outros textos de entrada previamente classificados.
 
 \subsection*{Modelo baseado em distância}
-A técnica que decidimos utilizar é baseado na \textbf{distância euclidiana}~\ref{eqn:euclid} entre o texto sem classificação e os textos da base de conhecimento. Como a distância envolvendo a quantidade de ocorrência poderia dar uma falsa informação, usamos a porcentagem que cada letra no texto.
+A técnica que decidimos utilizar é baseado na \textbf{distância euclidiana}~\ref{eqn:euclid} entre o texto sem classificação e os textos da base de conhecimento. Como a distância envolvendo a quantidade de ocorrência poderia dar uma falsa informação, usamos a porcentagem que cada letra é encontrada no texto.
 
+\vspace{0.5cm}
 \begin{equation}
 d(x_i, x_j) = \sqrt{\sum_{l=1}^{d} (x^l_i - x^l_j)^2}
 \label{eqn:euclid}
-\end{equation}
+\end{equation}\vspace{0.5cm}
 
 Como a distância para o mais próximo pode não ser tão precisa, a utilização do algoritmo \emph{k-NN}, do inglês \emph{k-Nearest Neighbour} se fez necessária, assim calculamos a distância para cada texto e fazemos uma média dos \emph{n} primeros.
 
@@ -141,7 +142,7 @@ Como a distância para o mais próximo pode não ser tão precisa, a utilizaçã
 Sabemos que o método que escolhemos para a identificação pode ser um pouco custoso para uma base de dados muito grande, mas a predição que fazemos é importante para casos em que se utiliza redes neurais ou outras teorias mais avançadas de Inteligência Artificial. Assim, temos uma idéia da potencialização que algoritmos baseados em \emph{Machine Learning} fornecem para um projeto, maximizando a eficiência e a velocidade em que diversos algoritmos são executados.
 \nocite{*}
 \bibliographystyle{plain} % Plain referencing style
-\bibliography{referencias} % Use the example bibliography file sample.bib
+\bibliography{poster} % Use the example bibliography file sample.bib
 
 \end{multicols}
 \end{document}
