@@ -2,4 +2,12 @@
 O grupo, analisando o problema, chegou a conclusão que uma solução efetiva seria usar o modelo preditivo tendo como entrada os textos da base previamente classificados e fazer uma comparação com o nosso alvo.
 
 \subsection{Modelo baseado em distância}
+A técnica que decidimos utilizar é baseado na \textbf{distância euclidiana}~\ref{eqn:euclid} entre o texto sem classificação e os textos da base de conhecimento. Como a distância envolvendo a quantidade de ocorrência poderia dar uma falsa informação, usamos a porcentagem que cada letra é encontrada no texto.
+
+\[
+d(x_i, x_j) = \sqrt{\sum_{l=1}^{d} (x^l_i - x^l_j)^2}
+\label{eqn:euclid}
+\]
+
+Como a distância para o mais próximo pode não ser tão precisa, a utilização do algoritmo \emph{k-NN}, do inglês \emph{k-Nearest Neighbor} se fez necessária, assim calculamos a distância para cada texto e fazemos uma média dos \emph{n} primeros, utilizando \(n = 3\).
 
