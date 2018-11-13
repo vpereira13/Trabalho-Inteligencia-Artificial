@@ -53,9 +53,9 @@ if __name__ == '__main__':
     resultado = 0
 
     # Aplica algoritmo dos k-NN (no caso 5)
-    for i in distancias[:5]:
+    for i in distancias[:3]:
         resultado += i[1]
-    resultado /= 5
+    resultado /= 3
 
     # Saída do resultado
     if int(resultado):
