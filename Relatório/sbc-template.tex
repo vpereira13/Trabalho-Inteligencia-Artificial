@@ -2,15 +2,24 @@
 
 \usepackage{sbc-template}
 \usepackage{graphicx,url}
-    \graphicspath{figuras/}
+    \graphicspath{{figuras/}}
 \usepackage{polyglossia}
     \setdefaultlanguage{portuges}
 \usepackage{microtype}
 \usepackage{showframe}
+\usepackage{framed}
+
+\usepackage{subfig}
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{verbatim}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{url}
 
 \sloppy
 
-\title{Título}
+\title{Identificando Idiomas com \emph{Machine Learning}}
 
 \author{
     Jorge Ashkar Ferreira Simondi\inst{1} --- 8517081\and\\
@@ -32,6 +41,8 @@
 \input{introducao}
 \input{analise}
 \input{predicao}
+\input{resultados}
+\input{proximos}
 \input{consideracoes}
 
 \bibliographystyle{sbc}
